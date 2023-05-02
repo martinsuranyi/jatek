@@ -23,6 +23,8 @@
         for e in words:
             if e[0].capitalize() == user_word[len(user_word)-1].capitalize():
                 robot_word = e
+                felhasznált.append(e)
+                words.remove(e)
                 break
         print(f"A robot választott szava: {robot_word}")
 
