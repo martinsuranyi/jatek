@@ -1,3 +1,20 @@
+import random
+
+def main():
+    words = ["alma", "baba", "csokoládé", "dió", "eper", "fűszer", "gumicsizma", "hinta", "iskola", "jégkorong", "karfiol", "limonádé", "málna", "narancs", "óra", "paprika", "quiche", "rózsa", "szék", "tyúk", "uborka", "víz", "walesi", "xilofon", "yzop"]
+    print("Üdvözöllek a robot szólánc játékban!")
+    print("A játék célja, hogy olyan szót adj meg, amely az előző szó utolsó betűjével kezdődik.")
+    user_word = input("Kezdjük! Add meg az első szót: ")
+
+    # Betöltjük a szavakat tartalmazó fájlt.
+    with open("magyarszavak.txt", "r", encoding="utf-8") as f:
+        words = f.read().splitlines()
+        for e in words:
+            if e[0].capitalize() == user_word[len(user_word)-1].capitalize():
+                robot_word = e
+                break
+    print(f"A robot választott szava: {robot_word}")
+    felhasznált = []
 
     # Felhasználó választ egy szót, amely az előző szó utolsó betűjével kezdődik.
     while True:
