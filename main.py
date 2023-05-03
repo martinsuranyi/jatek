@@ -31,7 +31,6 @@ def main():
             continue
         felhasznált.append(user_word)
         words.remove(user_word)
-        #[word for word in words if word[0] == user_word[-1] if len(user_word)>0]
         if not robot_word:
             print("Gratulálok, nyertél!")
             break
