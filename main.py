@@ -6,7 +6,6 @@ def main():
     print("A játék célja, hogy olyan szót adj meg, amely az előző szó utolsó betűjével kezdődik.")
     user_word = input("Kezdjük! Add meg az első szót: ")
 
-    # Betöltjük a szavakat tartalmazó fájlt.
     with open("magyarszavak.txt", "r", encoding="utf-8") as f:
         words = f.read().splitlines()
         for e in words:
@@ -16,7 +15,6 @@ def main():
     print(f"A robot választott szava: {robot_word}")
     felhasznált = []
 
-    # Felhasználó választ egy szót, amely az előző szó utolsó betűjével kezdődik.
     while True:
         user_word = input("Kérlek írd be a következő szót: ")
         if user_word[0] != robot_word[-1]:
